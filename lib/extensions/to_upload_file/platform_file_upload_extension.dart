@@ -4,12 +4,12 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:image_core/utils/file_category_resolver.dart';
 import 'package:image_core/data/models/upload_file.dart';
+import 'package:image_core/utils/file_category_resolver.dart';
 import 'package:mime/mime.dart';
 
 extension PlatformFileToUploadFile on PlatformFile {
-  Future<UploadFile> toUploadFile({
+  Future<UploadFile> toUploadFileFromPlatformFile({
     String? fileName,
     String? collectionPath,
     String? uploadingToastTxt,

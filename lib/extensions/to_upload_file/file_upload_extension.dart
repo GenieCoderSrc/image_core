@@ -1,14 +1,14 @@
-// 📄 xfile_upload_extension.dart
+// 📄 file_upload_extension.dart
 
+import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:image_core/utils/file_category_resolver.dart';
 import 'package:image_core/data/models/upload_file.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:image_core/utils/file_category_resolver.dart';
 import 'package:mime/mime.dart';
 
-extension XFileToUploadFile on XFile {
-  Future<UploadFile> toUploadFile({
+extension FileToUploadFile on File {
+  Future<UploadFile> toUploadFileFromFile({
     String? fileName,
     String? collectionPath,
     String? uploadingToastTxt,
@@ -16,11 +16,8 @@ extension XFileToUploadFile on XFile {
     String? contentDisposition,
   }) async {
     final Uint8List bytes = await readAsBytes();
-    final String resolvedName = fileName ?? name;
-    final String mimeType =
-        this.mimeType ??
-        lookupMimeType(resolvedName) ??
-        'application/octet-stream';
+    final String resolvedName = fileName ?? uri.pathSegments.last;
+    final String mimeType = lookupMimeType(path) ?? 'application/octet-stream';
     final category = FileCategoryResolver.fromMimeType(mimeType);
 
     return UploadFile(
@@ -29,7 +26,7 @@ extension XFileToUploadFile on XFile {
       mimeType: mimeType,
       collectionPath: collectionPath,
       uploadingToastTxt: uploadingToastTxt,
-      metadata: metadata ?? {'source': 'xfile', 'file-path': path},
+      metadata: metadata ?? {'file-path': path},
       contentDisposition: contentDisposition,
       category: category,
     );
