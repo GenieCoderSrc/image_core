@@ -8,7 +8,7 @@ All notable changes to the **image_core** package will be documented in this fil
 
 ### July 21, 2025
 
-### ✨ Added
+### ✨ Updated
 
 * `BaseImageManager<T>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and `deleteIfAvailable` methods.
 
