@@ -3,7 +3,7 @@ description: "A Dart/Flutter package for standardized image and file upload hand
   Supports cross-platform file conversion from XFile, File, and PlatformFile to a unified UploadFile model, 
   file type categorization, and abstract upload/delete management via BaseImageManager."
 
-version: 0.0.1
+version: 0.0.2
 
 homepage: https://github.com/GenieCoderSrc/image_core
 repository: https://github.com/GenieCoderSrc/image_core
