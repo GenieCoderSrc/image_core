@@ -4,6 +4,14 @@ All notable changes to the **image_core** package will be documented in this fil
 
 ---
 
+## 0.0.3
+
+### July 21, 2025
+
+### ✨ Updated
+
+* Update dependency.
+
 ## 0.0.2
 
 ### July 21, 2025

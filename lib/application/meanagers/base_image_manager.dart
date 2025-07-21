@@ -1,9 +1,9 @@
 // XFile: base_image_manager.dart
 
+import 'package:cross_file/cross_file.dart';
 import 'package:dartz/dartz.dart';
 import 'package:exception_type/exception_type.dart';
 import 'package:i_tdd/i_tdd.dart';
-import 'package:image_picker/image_picker.dart';
 // base_image_manager.dart
 
 abstract class BaseImageManager<T> {
