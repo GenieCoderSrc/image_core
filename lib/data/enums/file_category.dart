@@ -1,7 +1,1 @@
-enum FileCategory {
-  image,
-  video,
-  document,
-  audio,
-  other,
-}
+enum FileCategory { image, video, document, audio, other }
