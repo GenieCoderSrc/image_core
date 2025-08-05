@@ -19,10 +19,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  i_tdd:
-    path: ../i_tdd
-  exception_type:
-    path: ../exception_type
+  i_tdd: ^0.0.2
+  exception_type: ^0.0.3
 
 
   file_picker: ^10.2.1
@@ -31,6 +29,8 @@ dependencies:
   cross_file: ^0.3.4+2
   equatable: ^2.0.7
   dartz: ^0.10.1
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
