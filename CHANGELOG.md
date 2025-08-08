@@ -4,6 +4,14 @@ All notable changes to the **image_core** package will be documented in this fil
 
 ---
 
+## 0.0.4
+
+### Aug 8, 2025
+
+### ✨ Updated
+
+- Updated file_picker version as file_picker: ^10.2.2
+
 ## 0.0.3
 
 ### July 21, 2025
@@ -20,14 +28,14 @@ All notable changes to the **image_core** package will be documented in this fil
 
 * `BaseImageManager<T>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and `deleteIfAvailable` methods.
 
-
 ## 0.0.1
 
 ### July 19, 2025
 
 ### ✨ Added
 
-* `BaseImageManager<TData>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and `deleteIfAvailable` methods.
+* `BaseImageManager<TData>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and `deleteIfAvailable`
+  methods.
 * `UploadFile` model class for standardized file representation.
 * `FileCategory` enum for file categorization.
 * Extensions:
