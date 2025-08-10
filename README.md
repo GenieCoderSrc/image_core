@@ -9,7 +9,6 @@ A robust and extensible Dart/Flutter package that simplifies image and file uplo
 * ✅ Platform-agnostic file support (`XFile`, `File`, `PlatformFile`)
 * 📦 Convert file data to standardized `UploadFile` format
 * 🧱 Enum-based file categorization (`image`, `video`, `document`, `audio`, `other`)
-* 🚀 Easy-to-extend `BaseImageManager` with upload/delete logic
 * 🧩 Extension-based conversion utilities
 * 📄 MIME type detection and content type resolution
 * 🧪 Functional error handling using `Either<IFailure, TResult>` from `dartz`
@@ -27,48 +26,6 @@ flutter pub add image_core
 
 ## 🧰 Getting Started
 
-### Create Your Own Image Manager
-
-Extend the `BaseImageManager<T>` and implement the `upload` and `delete` methods:
-
-```dart
-class FirebaseImageManager extends BaseImageManager<UploadFile> {
-  @override
-  Future<Either<IFailure, bool>> upload(UploadFile imageData) async {
-    // implement Firebase upload logic
-  }
-
-  @override
-  Future<Either<IFailure, bool>> delete(String url) async {
-    // implement Firebase delete logic
-  }
-}
-```
-
-### Upload Conditionally
-
-```dart
-await imageManager.uploadIfAvailable(
-  file: selectedXFile,
-  entityId: 'userId123',
-  successMsg: 'Profile picture uploaded!',
-  dataBuilder: (file, id) => await file.toUploadFileFromXFile(
-    collectionPath: 'users/$id/images',
-  ),
-);
-```
-
-### Delete Conditionally
-
-```dart
-await imageManager.deleteIfAvailable(
-  imageUrl: 'https://firebasestorage.googleapis.com/...',
-  successMsg: 'Image removed',
-);
-```
-
----
-
 ## 🔄 Extensions
 
 ### `XFile.toUploadFileFromXFile()`
@@ -79,7 +36,7 @@ Converts a `XFile` into a standardized `UploadFile`.
 
 Converts a `PlatformFile` from `file_picker` to `UploadFile`.
 
-### `File.toUploadFileFromFile()`
+### `file.toUploadFileFromFile()`
 
 Converts a regular Dart `File` to an `UploadFile`.
 
@@ -162,13 +119,10 @@ You want to upload an image picked via `image_picker`:
 ```dart
 final XFile? file = await ImagePicker().pickImage(source: ImageSource.gallery);
 
-await myImageManager.uploadIfAvailable(
-  file: file,
-  entityId: 'profile_01',
-  dataBuilder: (file, id) => await file.toUploadFileFromXFile(
-    collectionPath: 'profiles/$id/images',
-  ),
+final UploadFile uploadFile = await file.toUploadFileFromXFile(
+  collectionPath: 'profiles/$id/images',
 );
+
 ```
 
 ---
@@ -177,8 +131,3 @@ await myImageManager.uploadIfAvailable(
 
 **image_core**
 Developed with ❤️ by [Shohidul Islam](https://github.com/ShohidulProgrammer)
-
----
-
-Happy Uploading 🚀
-# image_core

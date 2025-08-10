@@ -4,6 +4,18 @@ All notable changes to the **image_core** package will be documented in this fil
 
 ---
 
+## 0.0.5
+
+### Aug 10, 2025
+
+### ✨ Updated
+
+- Updated file_picker version as file_picker: ^10.2.4
+- 
+### ✨ Removed
+
+- Removed `BaseImageManager`
+
 ## 0.0.4
 
 ### Aug 8, 2025

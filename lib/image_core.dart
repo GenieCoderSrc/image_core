@@ -7,5 +7,4 @@ export 'extensions/to_upload_file/platform_file_upload_extension.dart';
 export 'extensions/to_upload_file/xfile_upload_extension.dart';
 export 'utils/content_type_util.dart';
 export 'utils/file_category_resolver.dart';
-export 'application/meanagers/base_image_manager.dart';
 export 'package:cross_file/cross_file.dart';
