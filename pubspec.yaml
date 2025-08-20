@@ -19,7 +19,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  file_picker: ^10.3.1
+  file_picker: ^10.3.2
   mime: ^2.0.0
   image_picker: ^1.2.0
   cross_file: ^0.3.4+2
