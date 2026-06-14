@@ -1,5 +1,10 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+
+
+
+
 All notable changes to the **image_core** package will be documented in this file.
 
 ---
@@ -77,3 +82,4 @@ All notable changes to the **image_core** package will be documented in this fil
 * Project structured with SOLID principles and clean architecture.
 * Functional error handling with `dartz` and `IFailure`.
 * Toast/report integration via `i_tdd`'s `handleReport()`.
+
