@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-
-
-
-All notable changes to the **image_core** package will be documented in this file.
-
 ---
+
+## 0.0.7
+
+### Jun 15, 2026
+
+### ✨ Updated
+
+- Updated `file_picker: ^11.0.2`
+- Updated `mime: ^2.0.0`
+- Updated `image_picker: ^1.2.2`
+- Updated `cross_file: ^0.3.5+2`
+- Updated `equatable: ^2.0.8`
 
 ## 0.0.6
 
@@ -55,7 +62,8 @@ All notable changes to the **image_core** package will be documented in this fil
 
 ### ✨ Updated
 
-* `BaseImageManager<T>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and `deleteIfAvailable` methods.
+* `BaseImageManager<T>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and
+  `deleteIfAvailable` methods.
 
 ## 0.0.1
 
@@ -63,7 +71,8 @@ All notable changes to the **image_core** package will be documented in this fil
 
 ### ✨ Added
 
-* `BaseImageManager<TData>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and `deleteIfAvailable`
+* `BaseImageManager<TData>` abstract class with `upload`, `delete`, `uploadIfAvailable`, and
+  `deleteIfAvailable`
   methods.
 * `UploadFile` model class for standardized file representation.
 * `FileCategory` enum for file categorization.
