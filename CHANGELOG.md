@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## 0.0.8
+
+### Sep 26, 2026
+
+### ✨ Updated
+
+- Updated `file_picker ^13.1.0`
+- Updated `mime ^2.1.0`
+- Updated `image_picker ^1.2.3`
+- Updated `cross_file ^0.4.0`
+- Updated `equatable ^3.0.0`
+
 ## 0.0.7
 
 ### Jun 15, 2026
