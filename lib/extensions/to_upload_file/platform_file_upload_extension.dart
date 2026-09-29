@@ -16,15 +16,13 @@ extension PlatformFileToUploadFile on PlatformFile {
     Map<String, String>? metadata,
     String? contentDisposition,
   }) async {
-    final Uint8List fileBytes;
-
-    if (bytes != null) {
-      fileBytes = bytes!;
-    } else if (path != null) {
-      fileBytes = await File(path!).readAsBytes();
-    } else {
+    // Single-assignment initialization using PlatformFile's built-in readAsBytes()
+    final Uint8List fileBytes = await readAsBytes().catchError((_) async {
+      if (path != null) {
+        return await File(path!).readAsBytes();
+      }
       throw Exception('Cannot read PlatformFile: no bytes or path available');
-    }
+    });
 
     final String resolvedName = fileName ?? name;
     final String mimeType =
@@ -37,8 +35,7 @@ extension PlatformFileToUploadFile on PlatformFile {
       mimeType: mimeType,
       collectionPath: collectionPath,
       uploadingToastTxt: uploadingToastTxt,
-      metadata:
-          metadata ??
+      metadata: metadata ??
           {'source': 'platform-file', if (path != null) 'file-path': path!},
       contentDisposition: contentDisposition,
       category: category,
