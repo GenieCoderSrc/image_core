@@ -17,8 +17,7 @@ extension XFileToUploadFile on XFile {
   }) async {
     final Uint8List bytes = await readAsBytes();
     final String resolvedName = fileName ?? name;
-    final String mimeType =
-        this.mimeType ??
+    final String mimeType = this.mimeType ??
         lookupMimeType(resolvedName) ??
         'application/octet-stream';
     final category = FileCategoryResolver.fromMimeType(mimeType);
